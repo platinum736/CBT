@@ -1,0 +1,130 @@
+<html>
+<head>
+<title>Rules Creation</title>
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+$(function(){
+  $("#header").load("/header");
+  $("#footer").load("footer.html");
+});
+</script>
+</head>
+<body>
+<div id="header"></div>
+<form action="http://127.0.0.1:5000/rules/add" method="post" enctype = "multipart/form-data">
+ <br><br><br><br><br><br><br>
+
+<table width="600" border="0" align="center" cellpadding="5" cellspacing="1" bgcolor="#336699" class="entryTable">
+  <tr id="entryTableHeader">
+    <td></td>
+  </tr>
+  <tr>
+    <td class="contentArea"><div class="errorMessage" align="center"></div>
+        <table width="100%" border="5" cellpadding="2" cellspacing="1" class="text">
+          <tr align="center">
+            <td colspan="2">&nbsp;</td>
+          </tr>
+
+          <tr class="entryTable">
+            <td class="label"> &nbsp;Operating System (OS) </td>
+            <td class="content">
+              <select name="operating_system" class="box">
+                     <option value="hardware">Replacement</option>
+                     <option value="software">Software Installation / Upgradation</option>
+                     <option value="network">Netword / LAN / Internet Problem</option>
+                    <option value="network">Others</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr class="entryTable">
+            <td class="label"> &nbsp;Platform </td>
+            <td class="content">
+			            <select name="platform" class="box">
+				                 <option value="hardware">Replacement</option>
+				                 <option value="software">Software Installation / Upgradation</option>
+				                 <option value="network">Netword / LAN / Internet Problem</option>
+                        <option value="network">Others</option>
+		              </select>
+              </td>
+          </tr>
+
+          <tr class="entryTable">
+            <td class="label"> &nbsp;Release </td>
+            <td class="content">
+			            <select name="release" class="box">
+				                 <option value="hardware">Hardware Failure / Replacement</option>
+				                 <option value="software">Software Installation / Upgradation</option>
+				                 <option value="network">Netword / LAN / Internet Problem</option>
+                        <option value="network">Others</option>
+		              </select>
+              </td>
+          </tr>
+
+          <tr class="entryTable">
+            <td class="label"> &nbsp;Component </td>
+            <td class="content">
+			            <select name="component" class="box">
+				                 <option value="hardware">Hardware Failure / Replacement</option>
+				                 <option value="software">Software Installation / Upgradation</option>
+				                 <option value="network">Netword / LAN / Internet Problem</option>
+                        <option value="network">Others</option>
+		              </select>
+              </td>
+          </tr>
+
+          <tr class="entryTable">
+            <td class="label"> &nbsp;Domain </td>
+            <td class="content">
+			            <select name="domain" class="box">
+				                 <option value="hardware">Hardware Failure / Replacement</option>
+				                 <option value="software">Software Installation / Upgradation</option>
+				                 <option value="network">Netword / LAN / Internet Problem</option>
+                        <option value="network">Others</option>
+		              </select>
+              </td>
+          </tr>
+
+          <tr class="entryTable">
+            <td class="label"> &nbsp;Protocol </td>
+            <td class="content">
+			            <select name="protocol" class="box">
+				                 <option value="hardware">Hardware Failure / Replacement</option>
+				                 <option value="software">Software Installation / Upgradation</option>
+				                 <option value="network">Netword / LAN / Internet Problem</option>
+                        <option value="network">Others</option>
+		              </select>
+              </td>
+          </tr>
+
+          <tr class="entryTable">
+            <td class="label"> &nbsp;Type of Testing </td>
+            <td class="content">
+			            <select name="testing_type" class="box">
+				                 <option value="hardware">Hardware Failure / Replacement</option>
+				                 <option value="software">Software Installation / Upgradation</option>
+				                 <option value="network">Netword / LAN / Internet Problem</option>
+                        <option value="network">Others</option>
+		              </select>
+              </td>
+          </tr>
+
+          <tr class="entryTable">
+            <td class="label"> &nbsp;Log Location </td>
+            <td class="content">
+                <input name="file_location" type = "file" name = "file" />
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="2">&nbsp;</td>
+          </tr>
+      </table></td>
+  </tr>
+  <td><center><input name="btnSubmit" type="submit" id="btnSubmit" value=" Submit  "></center></td>
+</table>
+</form>
+
+<div id="footer"></div>
+</body>
+</html>

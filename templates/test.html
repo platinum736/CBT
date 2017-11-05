@@ -1,0 +1,14 @@
+<?php
+
+$m = new MongoClient();
+$db = $m->universal_data;
+$collection = $db->iptype;
+
+$cursor = $collection->find(array('name' => 'input type'));
+foreach ($cursor as $result) {
+  foreach ($result['values'] as $val) {
+    print_r($val);
+  }
+}
+
+?>
